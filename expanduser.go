@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func expanduser(data string) string {
+func ExpandUser(data string) string {
 	current, _ := user.Current()
 	return strings.Replace(data, "~", current.HomeDir, 1)
 }
